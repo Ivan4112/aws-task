@@ -20,9 +20,8 @@ import java.util.HashMap;
 @LambdaHandler(
 		lambdaName = "hello_world",
 		roleName = "hello_world-role",
-		layers = {"sdk-layer"},
-		runtime = DeploymentRuntime.JAVA11,
-		architecture = Architecture.ARM64,
+		isPublishVersion = true,
+		aliasName = "${lambdas_alias_name}",
 		logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
 @LambdaUrlConfig(
